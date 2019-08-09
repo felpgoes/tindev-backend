@@ -9,6 +9,7 @@ monsgoose.connect('mongodb+srv://felipe:felipe@cluster0-xxeny.mongodb.net/omnist
     useNewUrlParser: true 
 })
 
+server.user(cors())
 server.use(express.json())
 server.use(routes) 
 
