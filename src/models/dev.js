@@ -14,10 +14,16 @@ const DevSchema = new Schema({
         type: string,
         required: true,
     },
-    },  {
+    likes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Dev',
+    }],
+    dislikes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Dev',
+    }],
+},  {
         timestamps: true,
-    });
+});
 
     module.exports = model('Dev', DevSchema)
-
-    // 40:16min
